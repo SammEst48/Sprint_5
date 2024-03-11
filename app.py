@@ -14,7 +14,7 @@ if show_histogram: # si la casilla de verificación del histograma está marcada
     st.write('Creación de un histograma para el conjunto de datos de anuncios de venta de coches')
             
     # crear un histograma
-    fig = px.histogram(car_data, x="odometer", color_discrete_sequence=['red'], labels={'odometer': 'Odómetro'})
+    fig = px.histogram(car_data, x="odometer", color_discrete_sequence=['red'], labels={'odometer': 'Odómetro', 'count' : ' '})
         
     # mostrar un gráfico Plotly interactivo
     st.plotly_chart(fig, use_container_width=True)
