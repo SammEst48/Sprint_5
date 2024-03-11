@@ -11,7 +11,7 @@ show_scatter = st.checkbox('Construir gráfico de dispersión') # crear una casi
         
 if show_histogram: # si la casilla de verificación del histograma está marcada
     # escribir un mensaje
-    st.write('Muestra un histograma para el conjunto de datos de anuncios de venta de coches')
+    st.write('Muestra la distribución de los odómetros de los vehículos en anuncios de venta')
             
     # crear un histograma
     fig = px.histogram(car_data, x="odometer", color_discrete_sequence=['orange'], labels={'odometer': 'Odómetro'})
@@ -21,7 +21,7 @@ if show_histogram: # si la casilla de verificación del histograma está marcada
        
 if show_scatter: # si la casilla de verificación del gráfico de dispersión está marcada
     # escribir un mensaje
-    st.write('Muestra de un gráfico de dispersión para el conjunto de datos de anuncios de venta de coches')
+    st.write('Muestra la relación entre el precio y el odómetro de los vehículos en anuncios de venta')
             
     fig = px.scatter(car_data, x="odometer", y="price", color_discrete_sequence=['orange'], labels={'odometer': 'Odómetro', 'price': 'Precio'})
         
